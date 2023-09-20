@@ -1,0 +1,82 @@
+[
+    {
+        "region_code": "01",
+        "region": "Tarapacá",
+        "region_acronym": "TPCA"
+    },
+    {
+        "region_code": "02",
+        "region": "Antofagasta",
+        "region_acronym": "ANTOF"
+    },
+    {
+        "region_code": "03",
+        "region": "Atacama",
+        "region_acronym": "ATCMA"
+    },
+    {
+        "region_code": "04",
+        "region": "Coquimbo",
+        "region_acronym": "COQ"
+    },
+    {
+        "region_code": "05",
+        "region": "Valparaíso",
+        "region_acronym": "VALPO"
+    },
+    {
+        "region_code": "06",
+        "region": "Libertador General Bernardo O'Higgins",
+        "region_acronym": "LGBO"
+    },
+    {
+        "region_code": "07",
+        "region": "Maule",
+        "region_acronym": "MAULE"
+    },
+    {
+        "region_code": "08",
+        "region": "Biobío",
+        "region_acronym": "BBIO"
+    },
+    {
+        "region_code": "09",
+        "region": "La Araucanía",
+        "region_acronym": "ARAUC"
+    },
+    {
+        "region_code": "10",
+        "region": "Los Lagos",
+        "region_acronym": "LAGOS"
+    },
+    {
+        "region_code": "11",
+        "region": "Aysén del General Carlos Ibáñez del Campo",
+        "region_acronym": "AYSEN"
+    },
+    {
+        "region_code": "12",
+        "region": "Magallanes y de la Antártica Chilena",
+        "region_acronym": "MAG"
+    },
+    {
+        "region_code": "13",
+        "region": "Metropolitana de Santiago",
+        "region_acronym": "RM"
+    },
+    {
+        "region_code": "14",
+        "region": "Los Ríos",
+        "region_acronym": "RIOS"
+    },
+    {
+        "region_code": "15",
+        "region": "Arica y Parinacota",
+        "region_acronym": "AyP"
+    },
+    {
+        "region_code": "16",
+        "region": "Ñuble",
+        "region_acronym": "NUBLE"
+    }
+]
