@@ -52,12 +52,34 @@ function getTerritory(keyword: string, scope: ScopeKey = 'city') {
   return best_result;
 }
 
-function getDetails(keyword: string, scope: ScopeKey = 'city'): Partial<Cut> | undefined {
+function getCut(keyword: string, scope: ScopeKey = 'city'): Partial<Cut> | undefined {
   // normalize data  type
   const scope_data = data[scope] as Partial<Cut>[];
   const index = getTerritory(keyword, scope)?.index;
 
   return index ? scope_data[index] : undefined;
 }
+//TODO:
+function getCityList(
+  keyword?: string,
+  scope: Exclude<ScopeKey, 'city'> = 'region'
+): Cut[] | undefined {
+  const scope_data = data.city as Cut[];
+  //return all cities listed
+  if (!keyword) return scope_data;
 
-export { getTerritory, getDetails };
+  //if scope is regional
+  const ref = getCut(keyword, scope); //return Cut referencial;
+  if (!ref) return undefined;
+
+  //get code
+  const code = ref[`${scope}_code`] as keyof Cut;
+  if (!code) return undefined;
+
+  //filter
+  return scope_data.filter((it) => {
+    it[code] === ref[code];
+  });
+}
+
+export { getTerritory, getCut, getCityList };
