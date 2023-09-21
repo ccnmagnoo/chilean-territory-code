@@ -11,8 +11,7 @@ const data = {
 };
 
 type ScopeKey = keyof typeof data;
-
-export default function getTerritoryInfo(keyword: string, scope: ScopeKey = 'city') {
+function getTerritoryInfo(keyword: string, scope: ScopeKey = 'city') {
   //fetch data
   const scope_data = data[scope];
 
@@ -50,7 +49,7 @@ export default function getTerritoryInfo(keyword: string, scope: ScopeKey = 'cit
   //get the highest leven value
   const best_result = leven.sort((a, b) => (a?.leven ?? 1) - (b?.leven ?? 0))[0];
 
-  return best_result?.index
-    ? data[best_result.type as ScopeKey][best_result?.index]
-    : undefined;
+  return best_result;
 }
+
+export default getTerritoryInfo;
