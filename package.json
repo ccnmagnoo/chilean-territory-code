@@ -1,15 +1,12 @@
 {
   "name": "chilean-territory-code",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "get territory names, codes, and a list of cities by levenshtein proximity search",
   "main": "build/index.js",
   "files": [
     "build"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ccnmagnoo/chilean-territory-code"
-  },
+  "repository": "https://github.com/ccnmagnoo/chilean-territory-code",
   "scripts": {
     "build": "npx tsc",
     "test": "npx tsc && jest ./build",
@@ -25,8 +22,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-typescript": "^7.22.15",
-    "@jest/globals": "^29.7.0",
-    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   },
   "dependencies": {
