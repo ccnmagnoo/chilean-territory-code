@@ -1,7 +1,7 @@
 {
   "name": "chilean-territory-code",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "get territory names and codes by levenshtein proximity",
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
