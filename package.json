@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "npx tsc",
-    "test": "npx tsc && jest ./build"
+    "test": "npx tsc && jest ./build",
+    "publish": "npx tsc && npm publish"
   },
   "keywords": [
     "Chile",
