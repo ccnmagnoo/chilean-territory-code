@@ -11,7 +11,7 @@ const data = {
 };
 
 type ScopeKey = keyof typeof data;
-function getTerritoryInfo(keyword: string, scope: ScopeKey = 'city') {
+function getTerritory(keyword: string, scope: ScopeKey = 'city') {
   //fetch data
   const scope_data = data[scope];
 
@@ -52,4 +52,12 @@ function getTerritoryInfo(keyword: string, scope: ScopeKey = 'city') {
   return best_result;
 }
 
-export default getTerritoryInfo;
+function getDetails(keyword: string, scope: ScopeKey = 'city'): Partial<Cut> | undefined {
+  // normalize data  type
+  const scope_data = data[scope] as Partial<Cut>[];
+  const index = getTerritory(keyword, scope)?.index;
+
+  return index ? scope_data[index] : undefined;
+}
+
+export { getTerritory, getDetails };
