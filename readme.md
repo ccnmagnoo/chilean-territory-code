@@ -22,7 +22,7 @@ Input params
 - scope : 'city'|'province'|'region'
 
 ```typescript
-import { getTerritory, getDetails } from 'chilean-territory-code';
+import { getTerritory, getDetails, getCitiesList } from 'chilean-territory-code';
 const basic = getTerritory('criteria', scope);
 /**
  * returns{
@@ -43,5 +43,17 @@ const withCodes = getDetails('criteria', scope);
  *  region:string,
  *  region_code:string
  * }
+ */
+
+const listOfCities = getCitiesList('criteria', scope);
+/**
+ * returns Array<{
+ *  city?:string,
+ *  city_code?:string
+ *  province?:string,
+ *  province_code?:string
+ *  region:string,
+ *  region_code:string
+ * }>
  */
 ```

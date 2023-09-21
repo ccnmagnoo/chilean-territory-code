@@ -60,7 +60,7 @@ function getCut(keyword: string, scope: ScopeKey = 'city'): Partial<Cut> | undef
   return index ? scope_data[index] : undefined;
 }
 //TODO:
-function getCityList(
+function getCitiesList(
   keyword?: string,
   scope: Exclude<ScopeKey, 'city'> = 'region'
 ): Cut[] | undefined {
@@ -82,4 +82,4 @@ function getCityList(
   });
 }
 
-export { getTerritory, getCut, getCityList };
+export { getTerritory, getCut, getCitiesList };
