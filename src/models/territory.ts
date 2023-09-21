@@ -1,6 +1,7 @@
 export type Region = {
   region: string;
   region_code: string;
+  region_acronym: string;
 };
 
 export type Province = {

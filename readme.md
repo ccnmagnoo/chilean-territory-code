@@ -3,7 +3,8 @@
 A Node.js package for checking territorial names and codes using the Levenshtein distance
 algorithm. [github source code](https://github.com/ccnmagnoo/chilean-territory-code)
 
-> only valid for Chilean territory, and always returns the closest value
+> only valid for Chilean territory, and always returns the closest value, without
+> exception
 
 ## Installation
 

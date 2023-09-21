@@ -69,16 +69,16 @@ function getCitiesList(
   if (!keyword) return scope_data;
 
   //if scope is regional
-  const ref = getCut(keyword, scope); //return Cut referencial;
+  const ref = getCut(keyword, scope);
+  console.log('location ref: ', ref); //return Cut referencial;
   if (!ref) return undefined;
 
-  //get code
-  const code = ref[`${scope}_code`] as keyof Cut;
-  if (!code) return undefined;
+  //get referential homologized word
+  const code = ref[scope] as keyof Cut;
 
   //filter
   return scope_data.filter((it) => {
-    it[code] === ref[code];
+    return code === it[scope];
   });
 }
 
