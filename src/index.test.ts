@@ -1,12 +1,16 @@
 import { expect, test } from '@jest/globals';
-import getTerritoryInfo from '.';
+import { getTerritory } from '.';
 
 test('testing Valparaíso', () => {
-  expect(getTerritoryInfo('valpaiso')?.name).toBe('Valparaíso');
+  expect(getTerritory('valpaiso')?.name).toBe('Valparaíso');
 });
 test('testing Quillota province', () => {
-  expect(getTerritoryInfo('quuillot', 'province')?.name).toBe('Quillota');
+  expect(getTerritory('quuillot', 'province')?.name).toBe('Quillota');
 });
 test('testing Atacama region', () => {
-  expect(getTerritoryInfo('atacm', 'region')?.name).toBe('Atacama');
+  expect(getTerritory('atacm', 'region')?.name).toBe('Atacama');
+});
+
+test('testing Calera region', () => {
+  expect(getTerritory('la falera', 'city')?.name).toBe('Calera');
 });
