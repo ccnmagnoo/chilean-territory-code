@@ -83,3 +83,5 @@ function getCitiesList(
 }
 
 export { getTerritory, getCut, getCitiesList };
+
+module.exports = { getTerritory, getCut, getCitiesList };

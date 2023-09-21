@@ -34,15 +34,17 @@ const basic = getTerritory('criteria', scope);
  * }
  */
 
-const withCodes = getDetails('criteria', scope);
+const withCodes = getCut('criteria', scope);
 /**
+ * by CUT from spanish UNIQUE TERRITORIAL CODE
  * returns{
  *  city?:string,
  *  city_code?:string
  *  province?:string,
  *  province_code?:string
  *  region:string,
- *  region_code:string
+ *  region_code:string,
+ *  region_acronym:string
  * }
  */
 
@@ -54,7 +56,8 @@ const listOfCities = getCitiesList('criteria', scope);
  *  province?:string,
  *  province_code?:string
  *  region:string,
- *  region_code:string
+ *  region_code:string,
+ *  * region_acronym:string
  * }>
  */
 ```
