@@ -45,8 +45,16 @@ function getCut(keyword: string, scope: ScopeKey = 'city'): Partial<Cut> | undef
   return index ? scope_data[index] : undefined;
 }
 
+/**
+ * @function getCitiesList
+ * @param keyword referencial word for search criteria
+ * @param keyword_scope level of territorial scope of keyword, is a city?, is a region?.
+ * @param scope level of territorial scope on returns, can be all provincial cities or all regional cities.
+ * @returns cities in CUT format.
+ */
 function getCitiesList(
   keyword?: string,
+  keyword_scope?: ScopeKey,
   scope: Exclude<ScopeKey, 'city'> = 'region'
 ): Cut[] | undefined {
   const scope_data = data.city as Cut[];
@@ -54,7 +62,7 @@ function getCitiesList(
   if (!keyword) return scope_data;
 
   //if scope is regional
-  const ref = getCut(keyword, scope);
+  const ref = getCut(keyword, keyword_scope ?? scope);
   console.log('location ref: ', ref); //return Cut referencial;
   if (!ref) return undefined;
 

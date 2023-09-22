@@ -49,7 +49,15 @@ const withCodes = cut.getCut('criteria', scope);
  * }
  */
 
-const listOfCities = cut.getCitiesList('criteria', scope); // on undefined returns all communes, on default scope = 'city'
+// UPDATE: now you fetch all territorial cities, searching by related in province or regional
+/**
+ * @function getCitiesList
+ * @param keyword referencial word for search criteria
+ * @param keyword_scope level of territorial scope of keyword, is a city?, is a region?.
+ * @param scope level of territorial scope on returns, can be all provincial cities or all regional cities.
+ * @returns cities in CUT format.
+ */
+const listOfCities = cut.getCitiesList('criteria?', 'criteria scope?', scope); // on undefined returns all communes, on default scope = 'city'
 /**
  * returns Array<{
  *  city?:string,
