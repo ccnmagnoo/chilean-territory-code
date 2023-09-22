@@ -13,7 +13,9 @@ const data = {
 
 type ScopeKey = keyof typeof data;
 
-function getTerritory(keyword: string, scope: ScopeKey = 'city') {
+function getTerritory(keyword?: string, scope: ScopeKey = 'city') {
+  if (!keyword) return undefined;
+
   const scope_data = fetchInferred(data, scope);
 
   //get object with leven
@@ -40,7 +42,6 @@ function getCut(keyword: string, scope: ScopeKey = 'city'): Partial<Cut> | undef
   // normalize data  type
   const scope_data = data[scope] as Partial<Cut>[];
   const index = getTerritory(keyword, scope)?.index;
-
   return index ? scope_data[index] : undefined;
 }
 
