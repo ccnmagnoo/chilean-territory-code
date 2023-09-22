@@ -1,6 +1,6 @@
 {
   "name": "chilean-territory-code",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "get territory names, codes, and a list of cities by levenshtein proximity search",
   "main": "build/index.js",
   "files": [

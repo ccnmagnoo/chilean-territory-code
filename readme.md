@@ -23,8 +23,9 @@ Input params
 - scope : 'city'|'province'|'region'
 
 ```typescript
-import { getTerritory, getDetails, getCitiesList } from 'chilean-territory-code';
-const basic = getTerritory('criteria', scope);
+import * as cut from 'chilean-territory-code';
+
+const basic = cut.getTerritory('criteria', scope);
 /**
  * returns{
  *  name:string,
@@ -34,7 +35,7 @@ const basic = getTerritory('criteria', scope);
  * }
  */
 
-const withCodes = getCut('criteria', scope);
+const withCodes = cut.getCut('criteria', scope);
 /**
  * by CUT from spanish UNIQUE TERRITORIAL CODE
  * returns{
@@ -48,7 +49,7 @@ const withCodes = getCut('criteria', scope);
  * }
  */
 
-const listOfCities = getCitiesList('criteria', scope);
+const listOfCities = cut.getCitiesList('criteria', scope); // on undefined returns all communes, on default scope = 'city'
 /**
  * returns Array<{
  *  city?:string,
