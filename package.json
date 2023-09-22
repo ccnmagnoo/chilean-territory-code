@@ -10,7 +10,7 @@
   "scripts": {
     "build": "npx tsc",
     "test": "npx tsc && jest ./build",
-    "publish": "npm publish"
+    "publish": "npx tsc && jest ./build && npm publish"
   },
   "keywords": [
     "Chile",
